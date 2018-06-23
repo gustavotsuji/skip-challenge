@@ -1,0 +1,13 @@
+service: skipReports
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  saveClientReport:
+    handler: handler.saveClientsReport
+    events: 
+      - http: 
+          path: saveClientsReport
+          method: post
